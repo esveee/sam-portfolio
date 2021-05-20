@@ -26,6 +26,13 @@ def index():
 def timeline():
     return render_template('timeline.html', resume_pdf_link=resume_pdf_link)
 
+@app.route('/resume')
+def show_static_pdf():
+    return redirect("/static/files/resume.pdf")
+
+
+
+
 
 @app.route('/reading')
 def reading():
